@@ -10,7 +10,6 @@
 import { useEffect, useRef, useState } from "react";
 import {
   Linkedin,
-  Mail,
   Instagram,
   ChevronDown,
   Sparkles,
@@ -25,15 +24,11 @@ import {
   MapPin,
   CheckCircle,
   Send,
-  Loader2,
 } from "lucide-react";
-import { trpc } from "@/lib/trpc";
 
 // ─── Image CDN URLs ──────────────────────────────────────────
 const HERO_BG =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663477710385/gs2UqGeQoh4TdAdTX2AmRc/hero-bg-blue-fiuvcAuJbiEd4Z657RPQ7C.webp";
-const PROFILE_BLOB =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663477710385/gs2UqGeQoh4TdAdTX2AmRc/profile-blob-blue-Q7jYqgF8vt78yBdAwd9wsb.webp";
 const MARKETING_ABS =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663477710385/gs2UqGeQoh4TdAdTX2AmRc/marketing-abstract-NwUrWdB6VjCDXoiecwncFF.webp";
 const WORK_TEXTURE =
@@ -42,10 +37,8 @@ const WORK_TEXTURE =
 // ─── Brand color constants ────────────────────────────────────
 const BLUE = "#7B9EC4";        // soft periwinkle blue — primary accent
 const BLUE_LIGHT = "#C8D8EC";  // pale blue — backgrounds, borders
-const BLUE_PALE = "#EBF2F9";   // very pale blue — card backgrounds
 const NAVY = "#1A2340";        // deep navy — headlines, dark sections
 const SAGE = "#A8B5A2";        // sage green — secondary accent
-const SAGE_LIGHT = "#D4EDD8";  // pale sage — tag backgrounds
 const CREAM = "#FAF7F2";       // warm cream — main background
 
 // ─── Typewriter Hook ────────────────────────────────────────
